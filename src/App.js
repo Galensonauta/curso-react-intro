@@ -8,7 +8,7 @@ import { Creador } from './creador';
 
 const defaultOdos = [
   {text: "Ir al gm",
-  hecho: false},
+  hecho: true},
   {text: "Curso plazi",
   hecho: false},
   {text: "Maxi programa",

@@ -1,4 +1,4 @@
-li{
+.Lis{
     background-color: #FAFAFA;
     position: relative;
     display: flex;
@@ -8,18 +8,18 @@ li{
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
   }
   
-  p {
+.Context {
     margin: 24px 0 24px 24px;
     width: calc(100% - 120px);
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
   }
-  p--complete {
+  .Context--hecho {
     text-decoration: line-through;
   }
   
-  .Icon {
+  .Icono {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -31,19 +31,19 @@ li{
     /* background-color: #CCC; */
   }
   
-  .Icon-check {
+  .Icono-check {
     position: absolute;
     left: 12px;
   }
-  .Icon-check--active {
+  .Icono-check--verde {
     color: #4caf50;
   }
   
-  .Icon-delete {
+  .Icono-borrar {
     position: absolute;
     top: -24px;
     right: 0;
   }
-  .Icon-delete:hover {
+  .Icono-borrar:hover {
     color: red;
   }
