@@ -1,25 +1,37 @@
-import logo from './platzi.webp';
+import { Coun } from './coun';
+import { Search } from './search';
+import { Lis } from './lis';
+import { TodoItem } from './todoItem';
+import { Creador } from './creador';
+import React from 'react';
 import './App.css';
+
+const defaultOdos = [
+  {Text: "Ir al gm",
+  hecho: false},
+  {Text: "Curso plazi",
+  hecho: false},
+  {Text: "Maxi programa",
+  hecho: false},
+  {Text: "Universidad Chilecio",
+  hecho: false}
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edita el archivo <code>src/App.js</code> y guarda para recargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://platzi.com/reactjs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+       <Coun comple={2} resul={50}/>
+       <Search/>
+
+       <Lis>
+        {defaultOdos.map(odo=>
+        <TodoItem/>)}
+        
+       </Lis>
+
+        <Creador />
+    </React.Fragment>
   );
-}
+}    
 
 export default App;
