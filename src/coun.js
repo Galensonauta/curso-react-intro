@@ -1,3 +1,4 @@
+import "./coun.css";
 function Coun({resul,comple}){
     return(
       <h1>

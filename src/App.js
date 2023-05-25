@@ -7,13 +7,13 @@ import React from 'react';
 import './App.css';
 
 const defaultOdos = [
-  {Text: "Ir al gm",
+  {text: "Ir al gm",
   hecho: false},
-  {Text: "Curso plazi",
+  {text: "Curso plazi",
   hecho: false},
-  {Text: "Maxi programa",
+  {text: "Maxi programa",
   hecho: false},
-  {Text: "Universidad Chilecio",
+  {text: "Universidad Chilecio",
   hecho: false}
 ];
 
@@ -22,16 +22,17 @@ function App() {
     <React.Fragment>
        <Coun comple={2} resul={50}/>
        <Search/>
-
        <Lis>
         {defaultOdos.map(odo=>
-        <TodoItem/>)}
-        
-       </Lis>
-
-        <Creador />
+        <TodoItem key={odo.text} 
+        text={odo.text}
+        hecho={odo.hecho}
+        />)}
+        </Lis>
+       <Creador /> 
     </React.Fragment>
   );
 }    
+
 
 export default App;
