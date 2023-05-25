@@ -1,8 +1,9 @@
+import "./search.css"
 function Search(){
     return(
-    <h1>
-       Pelar cebolla    
-    </h1>
-      )
+    <input 
+    placeholder="Buscar"
+    />     
+    );
     }
 export{Search}  

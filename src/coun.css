@@ -1,6 +1,9 @@
 h1{
     font-size: 24px;
-    align-content: center;
+    text-align: center;
     margin: 0;
     padding: 48px;
+    font-weight: normal;
 }
+
+

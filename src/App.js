@@ -1,10 +1,10 @@
 import { Coun } from './coun';
+import React from 'react';
+
 import { Search } from './search';
 import { Lis } from './lis';
 import { TodoItem } from './todoItem';
 import { Creador } from './creador';
-import React from 'react';
-import './App.css';
 
 const defaultOdos = [
   {text: "Ir al gm",
@@ -19,7 +19,7 @@ const defaultOdos = [
 
 function App() {
   return (
-    <React.Fragment>
+    <>
        <Coun comple={2} resul={50}/>
        <Search/>
        <Lis>
@@ -30,7 +30,7 @@ function App() {
         />)}
         </Lis>
        <Creador /> 
-    </React.Fragment>
+    </>
   );
 }    
 

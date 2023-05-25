@@ -1,3 +1,4 @@
+import "./todoItem.css"
 function TodoItem(props){
     return(<li>
         <span>{props.hecho}</span>

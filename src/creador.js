@@ -1,6 +1,7 @@
+import "./creador.css"
 function Creador(){
     return(
-      <buttom>Crear</buttom>
+      <button>Crear</button>
       )
     }
 export{Creador}  
