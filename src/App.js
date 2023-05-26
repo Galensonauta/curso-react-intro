@@ -7,16 +7,8 @@ import { TodoItem } from './todoItem';
 import { Creador } from './creador';
 
 const defaultOdos = [
-  {text: "Ir al gm",
-  hecho: true},
-  {text: "Curso plazi",
-  hecho: false},
-  {text: "Maxi programa",
-  hecho: false},
-  {text: "Universidad Chilecito",
-  hecho: false},
-  {text: "Limpiar casa",
-  hecho: true}
+  {text: "Buscar al chuli",
+  hecho: false}
 ];
 
 function App() {
@@ -30,7 +22,20 @@ const busqueda = todos.filter(
   (todo)=>{
    return  todo.text.toLowerCase().includes(searchValue.toLowerCase());
   });
-console.log("Los usuarios buscaron "+searchValue);
+  const check = (text)=>{
+    const nuevoObjetivo=[...todos];
+    const ObjetivoIndex= nuevoObjetivo.findIndex((todo)=>todo.text==text
+    )
+    nuevoObjetivo[ObjetivoIndex].hecho=true
+    setTodos(nuevoObjetivo)
+  }
+  const borrar = (text)=>{
+    const nuevoObjetivo=[...todos];
+    const ObjetivoIndex= nuevoObjetivo.findIndex((todo)=>todo.text==text
+    );
+    nuevoObjetivo.splice(ObjetivoIndex, 1);
+    setTodos(nuevoObjetivo)
+  }
   return (
     <> 
        <Coun hecho={objetivosLogrados} total={objetivosTotales}/>
@@ -40,12 +45,13 @@ console.log("Los usuarios buscaron "+searchValue);
         
        />
        <Lis>
-        {busqueda.map(odo=>
+        {busqueda.map(todo=>
         <TodoItem 
-        key={odo.text} 
-        text={odo.text}
-        hecho={odo.hecho}
-        
+        key={todo.text} 
+        text={todo.text}
+        hecho={todo.hecho}
+        check={()=>check(todo.text)}
+        borrar={()=>borrar(todo.text)}
         />)}
         </Lis>
        <Creador /> 

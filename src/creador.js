@@ -1,5 +1,5 @@
 import "./creador.css"
-function Creador(){
+function Creador(setTodos){
     return(
       <button>+</button>
       )
