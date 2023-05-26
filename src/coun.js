@@ -1,8 +1,8 @@
 import "./coun.css";
-function Coun({resul,comple}){
+function Coun({total,hecho}){
     return(
       <h1>
-        Has compleado {comple} de {resul}
+        Has compleado {hecho} de {total}
       </h1>
       )
     }

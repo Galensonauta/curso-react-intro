@@ -13,15 +13,27 @@ const defaultOdos = [
   hecho: false},
   {text: "Maxi programa",
   hecho: false},
-  {text: "Universidad Chilecio",
-  hecho: false}
+  {text: "Universidad Chilecito",
+  hecho: false},
+  {text: "Limpiar casa",
+  hecho: true}
 ];
 
 function App() {
+  //Estdos hechos y derechos, con sus estados modificadores(los setNombredeEstado)
+const [todos, setTodos]=React.useState(defaultOdos);
+const [searchValue, setSearchValue]=React.useState("");
+//Los de abajo son estados derivados
+const objetivosLogrados= todos.filter(todo=>todo.hecho).length;
+const objetivosTotales= todos.length
+console.log("Los usuarios buscaron "+searchValue);
   return (
-    <>
-       <Coun comple={2} resul={50}/>
-       <Search/>
+    <> 
+       <Coun hecho={objetivosLogrados} total={objetivosTotales}/>
+       <Search 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+       />
        <Lis>
         {defaultOdos.map(odo=>
         <TodoItem key={odo.text} 

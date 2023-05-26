@@ -1,10 +1,16 @@
 import "./search.css"
-function Search(){
-    return(
+import React from "react";
+
+function Search({
+    searchValue,
+    setSearchValue,
+}){
+   return(
     <input 
-    placeholder="Buscar"     
+    placeholder="Buscar"
+    value={searchValue}     
     onChange={(event)=>{
-        console.log(event.target.value);
+        setSearchValue(event.target.value);
     }}
     />
     );
