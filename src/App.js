@@ -26,6 +26,10 @@ const [searchValue, setSearchValue]=React.useState("");
 //Los de abajo son estados derivados
 const objetivosLogrados= todos.filter(todo=>todo.hecho).length;
 const objetivosTotales= todos.length
+const busqueda = todos.filter(
+  (todo)=>{
+   return  todo.text.toLowerCase().includes(searchValue.toLowerCase());
+  });
 console.log("Los usuarios buscaron "+searchValue);
   return (
     <> 
@@ -33,18 +37,19 @@ console.log("Los usuarios buscaron "+searchValue);
        <Search 
         searchValue={searchValue}
         setSearchValue={setSearchValue}
+        
        />
        <Lis>
-        {defaultOdos.map(odo=>
-        <TodoItem key={odo.text} 
+        {busqueda.map(odo=>
+        <TodoItem 
+        key={odo.text} 
         text={odo.text}
         hecho={odo.hecho}
+        
         />)}
         </Lis>
        <Creador /> 
     </>
   );
 }    
-
-
 export default App;
