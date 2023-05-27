@@ -4,18 +4,23 @@ import "./todoItem.css"
 function TodoItem(props){
     return(
      <li className="Lis">
-        <CheckIcon/>
+        <CheckIcon 
+        hecho={props.hecho}
+        check={props.check}
+        />
         {/* <span 
          className={`Icono Icono-check ${props.hecho && "Icono-check--verde"}`}
-         onClick={props.check}
+         check={props.check}
          >
          
        V </span> */}
         <p className={`Context ${props.hecho && "Context--hecho"}`}>{props.text}
         </p>
-        <BorrarIcon/>
+        <BorrarIcon
+        borrar={props.borrar}
+        />
         {/* <span className="Icono Icono-borrar" 
-        onClick={props.borrar}
+        borrar={props.borrar}
         >
             X</span> */}
         </li>

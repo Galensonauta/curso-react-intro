@@ -8,7 +8,7 @@ import { Creador } from './creador';
 
 const defaultOdos = [
   {text: "Universidad de Chilecito",
-  hecho: false},
+  hecho: true},
   {text: "ALURA/ONE",
   hecho: false},
   {text: "Maxi programa",

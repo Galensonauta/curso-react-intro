@@ -1,18 +1,19 @@
-import { ImCheckmark2} from "react-icons/im";
+import { RiCheckboxCircleLine} from "react-icons/ri";
 import { RiDeleteBin2Line} from "react-icons/ri";
 
 
 const iconoTypes = {
-    "check": <ImCheckmark2/> ,
-    "borrar": <RiDeleteBin2Line/> 
+    "check": (color)=> <RiCheckboxCircleLine className="Icono-svg" fill={color}/> ,
+    "borrar": (color)=> <RiDeleteBin2Line className="Icono-svg" fill={color}/> 
 }
 
-function Icono({type}){
+function Icono({type, color, onClick}){
     return (
         <span
         className={`Icono Icono-${type}`}
+        onClick={onClick}
         >
-        {iconoTypes[type]} 
+        {iconoTypes[type](color)} 
         </span>
         )
 }

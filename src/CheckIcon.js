@@ -1,11 +1,12 @@
 import React from "react";
 import {Icono} from "./Icono"
 
-function CheckIcon(){
+function CheckIcon({hecho,check}){
     return (
         <Icono
         type="check"
-        color="grey"
+        color={hecho?"green":"grey"}
+        onClick={check}
         />
     )
 }

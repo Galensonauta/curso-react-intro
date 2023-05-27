@@ -19,7 +19,7 @@
     text-decoration: line-through;
   }
   
-  .Icono {
+  .Icono-svg {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -44,6 +44,9 @@
     top: -24px;
     right: 0;
   }
-  .Icono-borrar:hover {
-    color: red;
+  .Icono-borrar:hover .Icono-svg {
+    fill: red;
+  }
+  .Icono-check:hover .Icono-svg {
+    fill: green;
   }
