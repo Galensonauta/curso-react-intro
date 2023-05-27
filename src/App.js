@@ -18,39 +18,44 @@ import { Creador } from './creador';
 // ];
 // localStorage.setItem("Objetivos_Vb", JSON.stringify(objetivosDefault));
 
-function App() {
-  const localStorageObjetivos = localStorage.getItem("Objetivos_Vb");
-  let parsedObjetivos;
-  if (!localStorageObjetivos) {
-     localStorage.setItem("Objetivos_Vb", JSON.stringify([]));
-     parsedObjetivos=[];
+function useLocalStorage (itemName, initialValue){
+  const localStorageItem = localStorage.getItem(itemName);
+  let parsedItem;
+  if (!localStorageItem) {
+     localStorage.setItem(itemName, JSON.stringify(initialValue));
+     parsedItem=initialValue;
   }else{
-     parsedObjetivos=JSON.parse(localStorageObjetivos);
+     parsedItem=JSON.parse(localStorageItem);
   }
-  //Estdos hechos y derechos, con sus estados modificadores(los setNombredeEstado)
-const [todos, setTodos]=React.useState(parsedObjetivos);
-const [searchValue, setSearchValue]=React.useState("");
-//Los de abajo son estados derivados
-const objetivosLogrados= todos.filter(todo=>todo.hecho).length;
-const objetivosTotales= todos.length
-const busqueda = todos.filter(
-  (todo)=>{
-   return  todo.text.toLowerCase().includes(searchValue.toLowerCase());
+const [item, setItem] = React.useState(parsedItem);
+  const salvarItem = (newItem)=>{
+    localStorage.setItem(itemName, JSON.stringify(newItem))
+    setItem(newItem);
+  }
+ return [item, salvarItem]
+}
+
+function App() {
+    //Estdos hechos y derechos, con sus estados modificadores(los setNombredeEstado)
+    const [objetivos, salvarObjetivos] = useLocalStorage("Objetivos_Vb", []);
+    const [searchValue, setSearchValue]=React.useState("");
+    //Los de abajo son estados derivados
+    const objetivosTotales= objetivos.length
+    const objetivosLogrados= objetivos.filter(todo=>todo.hecho).length;
+    const busqueda = objetivos.filter(
+     (todo)=>{
+       return  todo.text.toLowerCase().includes(searchValue.toLowerCase());
   });
-   const salvarObjetivos = (nuevoObjetivo)=>{
-     localStorage.setItem("Objetivos_Vb", JSON.stringify(nuevoObjetivo))
-     setTodos(nuevoObjetivo);
-   }
 
   const check = (text)=>{
-    const nuevoObjetivo=[...todos];
+    const nuevoObjetivo=[...objetivos];
     const ObjetivoIndex= nuevoObjetivo.findIndex((todo)=>todo.text==text
     )
     nuevoObjetivo[ObjetivoIndex].hecho=true
     salvarObjetivos(nuevoObjetivo)
   }
   const borrar = (text)=>{
-    const nuevoObjetivo=[...todos];
+    const nuevoObjetivo=[...objetivos];
     const ObjetivoIndex= nuevoObjetivo.findIndex((todo)=>todo.text==text
     );
     nuevoObjetivo.splice(ObjetivoIndex, 1);
