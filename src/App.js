@@ -7,8 +7,14 @@ import { TodoItem } from './todoItem';
 import { Creador } from './creador';
 
 const defaultOdos = [
-  {text: "Buscar al chuli",
-  hecho: false}
+  {text: "Universidad de Chilecito",
+  hecho: false},
+  {text: "ALURA/ONE",
+  hecho: false},
+  {text: "Maxi programa",
+  hecho: false},
+  {text: "Fullstack Platzi",
+  hecho: false},
 ];
 
 function App() {
