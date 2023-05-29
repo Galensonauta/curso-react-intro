@@ -12,6 +12,7 @@ function ObjetivoProvider({children}){
         error
       } = useLocalStorage("Objetivos_Vb", []);
       const [searchValue, setSearchValue]=React.useState("");
+      const [openModal, setOpenModal] = React.useState(true);
       //Los de abajo son estados derivados
       const objetivosLogrados= objetivos.filter(todo=>todo.hecho).length;
       const objetivosTotales= objetivos.length
@@ -45,6 +46,8 @@ function ObjetivoProvider({children}){
     busqueda,
     check,
     borrar,
+    openModal,
+    setOpenModal,
     }}>
        {children}
     </ObjetivosContext.Provider>

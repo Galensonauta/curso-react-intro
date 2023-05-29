@@ -8,13 +8,16 @@ import { ObjetivosCargando } from '../objetivosCargando/ObjetivosCargando';
 import { ObjetivosError } from '../objetivosError/ObjetivosError';
 import { ObjetivosVacios } from '../objetivosVacios/ObjetivosVacios';
 import { ObjetivosContext } from '../ObjetivosContext/ObjetivosContext';
+import { Modal } from "../Modal/Modal";
 function AppUi() {
    const {
       loading,
       error,              
       busqueda,
       check,              
-      borrar,             
+      borrar,   
+      openModal,
+      setOpenModal,          
      }=React.useContext(ObjetivosContext)
     return (
         <> 
@@ -44,7 +47,12 @@ function AppUi() {
             borrar={()=>borrar(todo.text)}
             />)}
              </Lis>
-             <Creador /> 
+             <Creador />
+              {openModal && (
+               <Modal>
+                  La funcionalidad de agregar objetivos
+               </Modal>
+              )}
         </>
       );
 }
