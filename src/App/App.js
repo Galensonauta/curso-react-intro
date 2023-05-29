@@ -14,12 +14,18 @@ import { useLocalStorage } from './useLocalStorage';
 // localStorage.setItem("Objetivos_Vb", JSON.stringify(objetivosDefault));
 
 function App() {
+  console.log("La")
     //Estdos hechos y derechos, con sus estados modificadores(los setNombredeEstado)
-    const [objetivos, salvarObjetivos] = useLocalStorage("Objetivos_Vb", []);
+    const {
+      item:objetivos,
+      salvarItem:salvarObjetivos,
+      loading,
+      error
+    } = useLocalStorage("Objetivos_Vb", []);
     const [searchValue, setSearchValue]=React.useState("");
     //Los de abajo son estados derivados
-    const objetivosTotales= objetivos.length
     const objetivosLogrados= objetivos.filter(todo=>todo.hecho).length;
+    const objetivosTotales= objetivos.length
     const busqueda = objetivos.filter(
      (todo)=>{
        return  todo.text.toLowerCase().includes(searchValue.toLowerCase());
@@ -41,6 +47,8 @@ function App() {
   }
   return (
     <AppUi
+    loading={loading}
+    error={error}
     objetivosTotales={objetivosTotales}
     objetivosLogrados={objetivosLogrados}
     searchValue={searchValue}

@@ -5,6 +5,8 @@ import { TodoItem } from '../todoItem/todoItem';
 import { Creador } from '../creador/creador';
 
 function AppUi({
+    loading,
+    error,
     objetivosTotales,
     objetivosLogrados,
     searchValue,
@@ -22,6 +24,10 @@ function AppUi({
             
            />
            <Lis>
+            {loading && <p>Cargando...</p>}
+            {error && <p>Error!!</p>}
+            {(!loading && busqueda.length == 0) && <p>Sin objetivos en la lista</p>}
+
             {busqueda.map(todo=>
             <TodoItem 
             key={todo.text} 
