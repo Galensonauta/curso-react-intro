@@ -1,3 +1,4 @@
+import React from "react";
 import { Coun } from '../coun/coun';
 import { Search } from '../search/search';
 import { Lis } from '../lis/lis';
@@ -8,19 +9,18 @@ import { ObjetivosError } from '../objetivosError/ObjetivosError';
 import { ObjetivosVacios } from '../objetivosVacios/ObjetivosVacios';
 import { ObjetivosContext } from '../ObjetivosContext/ObjetivosContext';
 function AppUi() {
+   const {
+      loading,
+      error,              
+      busqueda,
+      check,              
+      borrar,             
+     }=React.useContext(ObjetivosContext)
     return (
         <> 
            <Coun />
            <Search />
-           <ObjetivosContext.Consumer>
-            {({
-            loading,
-            error,              
-            busqueda,
-            check,              
-            borrar,             
-           })=>(
-           <Lis>
+             <Lis>
             {loading && (
                <>         
             <ObjetivosCargando/>
@@ -43,11 +43,8 @@ function AppUi() {
             check={()=>check(todo.text)}
             borrar={()=>borrar(todo.text)}
             />)}
-             </Lis>)}
-             
-           </ObjetivosContext.Consumer>
-           
-           <Creador /> 
+             </Lis>
+             <Creador /> 
         </>
       );
 }

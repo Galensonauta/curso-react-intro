@@ -4,7 +4,6 @@ import { ObjetivoProvider } from '../ObjetivosContext/ObjetivosContext';
 
 function App() {
   return (
-    
 <ObjetivoProvider>
 <AppUi  />
 </ObjetivoProvider>

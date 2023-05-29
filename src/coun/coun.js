@@ -1,8 +1,14 @@
+import React from "react";
 import "./coun.css";
-function Coun({total,hecho}){
+import { ObjetivosContext } from "../ObjetivosContext/ObjetivosContext";
+function Coun(){
+  const {
+    objetivosLogrados,
+    objetivosTotales
+  }=React.useContext(ObjetivosContext)
     return(
       <h1>
-        Has compleado {hecho} de {total}
+        Has compleado {objetivosLogrados} de {objetivosTotales}
       </h1>
       )
     }

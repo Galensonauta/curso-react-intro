@@ -1,10 +1,13 @@
-import "./search.css"
 import React from "react";
+import { ObjetivosContext } from "../ObjetivosContext/ObjetivosContext";
+import "./search.css"
 
-function Search({
+function Search(){
+const {
     searchValue,
     setSearchValue,
-}){
+  }=React.useContext(ObjetivosContext)
+{
    return(
     <input 
     placeholder="Buscar"
@@ -14,5 +17,5 @@ function Search({
     }}
     />
     );
-    }
+    }}
 export{Search}  
