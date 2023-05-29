@@ -6,25 +6,20 @@ import { Creador } from '../creador/creador';
 import { ObjetivosCargando } from '../objetivosCargando/ObjetivosCargando';
 import { ObjetivosError } from '../objetivosError/ObjetivosError';
 import { ObjetivosVacios } from '../objetivosVacios/ObjetivosVacios';
-function AppUi({
-    loading,
-    error,
-    objetivosTotales,
-    objetivosLogrados,
-    searchValue,
-    setSearchValue,
-    busqueda,
-    check,
-    borrar,
- }) {
+import { ObjetivosContext } from '../ObjetivosContext/ObjetivosContext';
+function AppUi() {
     return (
         <> 
-           <Coun hecho={objetivosLogrados} total={objetivosTotales}/>
-           <Search 
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            
-           />
+           <Coun />
+           <Search />
+           <ObjetivosContext.Consumer>
+            {({
+            loading,
+            error,              
+            busqueda,
+            check,              
+            borrar,             
+           })=>(
            <Lis>
             {loading && (
                <>         
@@ -48,9 +43,16 @@ function AppUi({
             check={()=>check(todo.text)}
             borrar={()=>borrar(todo.text)}
             />)}
-            </Lis>
+             </Lis>)}
+             
+           </ObjetivosContext.Consumer>
+           
            <Creador /> 
         </>
       );
 }
 export { AppUi }
+
+
+
+
