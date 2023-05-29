@@ -1,9 +1,5 @@
 import React from 'react';
-import { Coun } from '../coun/coun';
-import { Search } from '../search/search';
-import { Lis } from '../lis/lis';
-import { TodoItem } from '../todoItem/todoItem';
-import { Creador } from '../creador/creador';
+import { AppUi } from './AppUi';
 import { useLocalStorage } from './useLocalStorage';
 // const objetivosDefault = [
 //   {text: "Universidad de Chilecito",
@@ -44,25 +40,15 @@ function App() {
     salvarObjetivos(nuevoObjetivo)
   }
   return (
-    <> 
-       <Coun hecho={objetivosLogrados} total={objetivosTotales}/>
-       <Search 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-        
-       />
-       <Lis>
-        {busqueda.map(todo=>
-        <TodoItem 
-        key={todo.text} 
-        text={todo.text}
-        hecho={todo.hecho}
-        check={()=>check(todo.text)}
-        borrar={()=>borrar(todo.text)}
-        />)}
-        </Lis>
-       <Creador /> 
-    </>
-  );
+    <AppUi
+    objetivosTotales={objetivosTotales}
+    objetivosLogrados={objetivosLogrados}
+    searchValue={searchValue}
+    setSearchValue={setSearchValue}
+    busqueda={busqueda}
+    check={check}
+    borrar={borrar}
+    />
+  )
 }    
 export default App;
