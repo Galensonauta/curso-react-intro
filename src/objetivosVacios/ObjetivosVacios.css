@@ -1,0 +1,12 @@
+.ObjetivosVacios{
+    margin: 64px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 35px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+.ObjetivosVacios-container{
+    background-color: rgba(72, 6, 6, 0.493);
+    height: 250px;
+}

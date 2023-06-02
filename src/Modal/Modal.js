@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import "./Modal.css"
 
-function Modal({childen}){
+
+function Modal({children}){
    return ReactDOM.createPortal (
      <div className="Modal">
-        {childen}
+        {children}
      </div>,
-    document.getElementById("Modal")
-   );
+document.getElementById("modal")   );
 }
 
 export {Modal};

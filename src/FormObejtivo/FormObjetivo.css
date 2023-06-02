@@ -1,0 +1,62 @@
+form{
+    width: 90%; 
+    max-width:  370px;
+    height: 70%;
+    max-height: 200px;
+    background-color: rgba(80, 92, 80, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 33px 40px;
+    z-index: 1;
+}
+label{
+    
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(2, 21, 3);
+    font-weight: bold;
+    
+}
+textArea{
+    background: #f9fbfca7;
+    border-radius: 2px;
+    border: 2px solid #202329;
+    margin-top: 10px;
+    height: 120px;
+    width: calc(100% - 10px);
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #1E1E1F;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+}
+.FormObjetivo-buttonContainer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.FormObjetivoSub-buttonContainer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.Icono-nuevo-check {
+  position: relative;
+  left: 50px;
+  top: -10px;
+
+}
+.Icono-nuevo-borrar {
+  position: relative;
+  right: 60px;
+  top: 15px;
+}
+

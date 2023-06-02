@@ -6,14 +6,26 @@
     align-items: center;
     margin-top: 24px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    background-color: #6199075b;
+  }
+  .LisSub{
+    background-color: #ff00008b;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+    background-color: #263a06;
   }
   
 .Context {
     margin: 24px 0 24px 24px;
-    width: calc(100% - 120px);
-    font-size: 18px;
-    line-height: 24px;
+    width: calc(100% - 250px);
+    font-size: 25px;
+    line-height: 50px;
     font-weight: 400;
+    font-weight: bolder;
   }
   .Context--hecho {
     text-decoration: line-through;

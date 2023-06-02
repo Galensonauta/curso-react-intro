@@ -1,25 +1,27 @@
-button{
+.creador{
     background-color: #61DAFA;
     box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 50px;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
+    position: absolute;
+    bottom: 550px;
+    right: 70px;
     font-weight: bold;
     color: #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 64px;
-    width: 64px;
+    height: 90px;
+    width: 90px;
   
     transform: rotate(0);
     transition: .3s ease;
+
+    z-index: 1;
   }
   
-  button:hover {
+.creador:hover {
     transform: rotate(224deg);
   }

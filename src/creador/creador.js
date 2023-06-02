@@ -1,8 +1,13 @@
+import React from "react"
 import "./creador.css"
-function Creador(setTodos){
+function Creador({setOpenModal}){
     return(
-      <button>+</button>
-      )
+      <button 
+        className="creador"
+        onClick={()=>{setOpenModal(state=>!state)}}>
+        +</button>
+    )
     }
 export{Creador}
+
 

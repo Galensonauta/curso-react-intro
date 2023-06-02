@@ -1,0 +1,12 @@
+.ModalSubTareas{
+  background-color:rgba(0, 0, 0, 0.861);
+  display:flex;justify-content:center;
+  align-items:center;
+  color:#fff;
+  position: fixed;
+  top:350px;
+  left:0px;
+  right:0px;
+  bottom: 0px;
+  z-index: 1;
+}

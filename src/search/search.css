@@ -1,5 +1,5 @@
 input{
-    background: #F9FBFC;
+    background: #91ba086e;
     border-radius: 2px;
     border: 2px solid #202329;
     margin: 0 24px;
@@ -20,5 +20,5 @@ input{
   }
   
  input:focus {
-    outline-color: #61DAFA;
+    outline-color: #317d11cc;
   }
