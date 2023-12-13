@@ -6,15 +6,15 @@
     cursor: pointer;
     font-size: 50px;
     position: absolute;
-    bottom: 550px;
-    right: 70px;
+    bottom: 485px;
+    right: 125px;
     font-weight: bold;
     color: #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90px;
-    width: 90px;
+    height: 40px;
+    width: 40px;
   
     transform: rotate(0);
     transition: .3s ease;

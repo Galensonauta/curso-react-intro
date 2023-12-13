@@ -2,8 +2,8 @@ input{
     background: #91ba086e;
     border-radius: 2px;
     border: 2px solid #202329;
-    margin: 0 24px;
-    height: 64px;
+    margin-top: 10px;
+    height: 30px;
     width: calc(100% - 62px);
     font-size: 24px;
     text-align: center;

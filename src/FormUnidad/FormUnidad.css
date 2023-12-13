@@ -11,7 +11,7 @@ form{
     padding: 33px 40px;
     z-index: 1;
 }
-label{
+h2{
     
     font-size: 20px;
     line-height: 24px;
@@ -20,12 +20,12 @@ label{
     font-weight: bold;
     
 }
-textArea{
+input{
     background: #f9fbfca7;
     border-radius: 2px;
     border: 2px solid #202329;
     margin-top: 10px;
-    height: 120px;
+    height: 30px;
     width: calc(100% - 10px);
     font-size: 24px;
     text-align: center;

@@ -1,7 +1,10 @@
-ul{
-    margin: 0;
-    padding: 0 0 56px 0;
-    list-style: none;
-    background-color: #88070763;
+.Lis{
     position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 50px rgba(25, 85, 205, 0.15);
+    background-color: #f4000041;
+    width: 100%;
   }
+ 
