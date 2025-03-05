@@ -1,24 +1,24 @@
-input{
-    background: #91ba086e;
-    border-radius: 2px;
-    border: 2px solid #202329;
-    margin-top: 10px;
-    height: 30px;
-    width: calc(100% - 62px);
+   .searchInput {
+    position: relative;
+    margin: .7em 0em .3em;
+     background: #f9fbfca7;  
+    height: 1em;
     font-size: 24px;
     text-align: center;
     font-family: 'Montserrat';
     font-weight: 400;
     color: #1E1E1F;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-  }
-  
-  input::placeholder {
-    color: #A5A5A5;
-    font-family: 'Montserrat';
+    border: 2px solid var(--AzulVerde);
+    width: auto;
+
+        }  
+  .input::placeholder {
+    color: var(--AzulOscuroSuave);
+    font-family: var(--font);
     font-weight: 400;
+  }  
+  .input:focus {
+    outline-color: var(--AzulVerdeSuave);
   }
   
- input:focus {
-    outline-color: #317d11cc;
-  }

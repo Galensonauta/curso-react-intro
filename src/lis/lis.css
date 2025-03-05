@@ -1,10 +1,19 @@
-.Lis{
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 5px 50px rgba(25, 85, 205, 0.15);
-    background-color: #f4000041;
-    width: 100%;
+ .Lis {
+  display: flex;
+      position: relative;
+      flex-direction: column;
+      top: -3em;
+      list-style: none;
+      background-color: var(--verdeOscuro);
+      padding: 5em;
+      box-shadow: 1px 11px 50px -17px var(--dark);
+      font-family: 'Montserrat';
+      width: -webkit-fill-available;
   }
- 
+  
+  @media (width < 600px) {
+    .Lis{
+        top: 1em;
+        padding: .4em;
+    }
+  }

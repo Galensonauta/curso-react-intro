@@ -1,62 +1,68 @@
 form{
-    width: 90%; 
-    max-width:  370px;
-    height: 70%;
-    max-height: 200px;
-    background-color: rgba(80, 92, 80, 0.508);
+  position: fixed;    
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 33px 40px;
-    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 40px;
+    background-color: var(--list);
+    border-radius: 26px;
+    border: none;
+    box-shadow: 0 5px 16px var(--dark);    
 }
-h2{
-    
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400;
-    color: rgb(2, 21, 3);
-    font-weight: bold;
-    
+
+input,select,textarea{  
+  width: 100%;
+padding: 12px;
+border: 2px solid var(--AzulVerde);
+border-radius: 15px;
+margin-top: 10px;
+background-color: var(--white);
+box-shadow: 0 5px 50px rgba(32, 35, 41, .25);
+text-align: center;
 }
-input{
-    background: #f9fbfca7;
-    border-radius: 2px;
-    border: 2px solid #202329;
-    margin-top: 10px;
-    height: 30px;
-    width: calc(100% - 10px);
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    color: #1E1E1F;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+textarea{
+  height: 15em;
+  width: 100%;
+}
+.deadeLineTitle{
+  font-weight: 700;
+  font-size: 20px;
+  margin: .3em 1em .3em;
 }
 .FormObjetivo-buttonContainer {
   margin-top: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
-.FormObjetivoSub-buttonContainer {
-  margin-top: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+label{
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 28px;
+  margin-bottom: 26px;
+}
+
+.formButtons{
+  display: inline-block;
+  width: 48;
+  height: 48px;
+  border: none;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--white);
+  cursor: pointer;
 }
 .Icono-nuevo-check {
-  position: relative;
-  left: 50px;
-  top: -10px;
-
+  background-color: var(--AzulVerdeSuave);
+  box-shadow: 0 5px 16px var(--dark);
+  margin: .3em;
 }
 .Icono-nuevo-borrar {
-  position: relative;
-  right: 60px;
-  top: 15px;
+  background-color: var(--AzulOscuro);
+  color: var(--white);
+  box-shadow: 0 5px 16px var(--dark);
 }
 

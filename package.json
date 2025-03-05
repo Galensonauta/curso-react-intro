@@ -33,7 +33,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "htts://Galensonauta.github.io/curso-react-intro",
+  "homepage": "htts://galensonauta.github.io/curso-react-intro",
   "devDependencies": {
     "gh-pages": "^6.1.0"
   }

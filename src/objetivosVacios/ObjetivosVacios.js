@@ -5,8 +5,7 @@ function ObjetivosVacios(){
    return(
 <div className="ObjetivosVacios-container">
 <p className="ObjetivosVacios">La lista esta vacia</p>
-</div>
-    
+</div>    
     );
     }
 export{ObjetivosVacios}

@@ -1,0 +1,24 @@
+
+.category-button {      
+    position: relative;
+    display: flex;
+    border: none;
+    border-radius: 25px;
+    font-size: 24px;
+    font-weight: 900;
+    padding-left: .7em;
+    margin: 0.3em 0em 0em 0em;
+    background-color: var(--AzulVerdeSuave);
+    box-shadow: var(--box-shadow);
+    font-family: 'Montserrat';
+    color: var(--AzulOscuroSuave);
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch; 
+    cursor: pointer;
+}
+.button1 {
+    background-color: var(--AzulVerdeSuave);
+}
+

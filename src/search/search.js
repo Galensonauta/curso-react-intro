@@ -1,16 +1,20 @@
 import React from "react";
 import "./search.css"
+import { ObjetivosContext } from "../ObjetivosContext/ObjetivosContext";
 
-function Search({searchValue,setSearchValue}){
-const onSearchValueChange= (event)=>{
-    setSearchValue(event.target.value)
-}
+function Search(){
+    const{
+    searchValue,
+    setSearchValue
+}=React.useContext(ObjetivosContext)
    return(
     <input 
+    className="searchInput"
     placeholder="Buscar"
     value={searchValue}     
-    onChange={onSearchValueChange}
-    />
+    onChange={(event) => {
+     setSearchValue(event.target.value);
+    }}/>
     );
     }
 export{Search}  

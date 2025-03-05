@@ -1,0 +1,17 @@
+
+.categoryEmpty-container{
+    position: relative;
+    border: none;
+    font-size: 25px;
+    border-radius: 25px;
+    color: var(--AzulOscuroSuave);
+    font-size: 25px;
+    font-weight: 900;
+    background-color: var(--AzulVerde);
+    box-shadow: var(--box-shadow);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: auto;
+}

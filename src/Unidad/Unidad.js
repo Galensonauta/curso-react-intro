@@ -1,80 +1,94 @@
-import React from "react";
 import {CheckIcon} from "../Icono/CheckIcon"
 import {BorrarIcon} from "../Icono/BorrarIcon"
+import {EditIcon} from "../Icono/EditIcon"
+import React from "react"
 import "../Icono/Icono.css"
-import "../lis/lis.css"
+import "./Unidad.css"
 
 
 function Unidad(props){
-  
-    return(
-    <div>
-        <li className="Lis">
+  const name=props.name;
+  const text=props.text;
+  const deadline=props.deadline;
+  const category = props.category
+  const handleEditUnidad = () => {
+    props.setFormData({
+        name: name,
+        description: text,
+        deadline: deadline,
+        category: category
+    });
+};
+ return(
+     <li className={`Context ${props.hecho && "Context--hecho"}`}
+     > 
+     <div className={`unidadHeader ${props.hecho && "unidadHeader--hecho"}`}>
+     <h1 
+        className={`categoryUnidad`}
+        >{category? category: "General"}
+        </h1>
+         <h2 
+        className={`name ${props.hecho && "Context--hecho"}`}
+        >{name}
+        </h2>        
+        <h3 
+        className={`deadline ${props.hecho && "Context--hecho"}`}
+        >{deadline ? `Fecha limite: ${deadline}` : "Sin fecha limite"}
+        </h3>
+      </div>      
+        <p 
+        className={`text ${props.hecho && "Context--hecho"}`}
+        >{text}
+        </p>
+        <div className="iconTask">
         <CheckIcon 
         hecho={props.hecho}
-        onCheck={props.onCheck}
-        />
-        <p  className={`Context ${props.hecho && "Context--hecho"}`}
-        >{props.text} 
-          </p>
-        <BorrarIcon
-        onBorrar={props.onBorrar}/>
+        check={props.check}
+        />    
+         <EditIcon
+                setOpenModal={props.setOpenModal}
+                setmodalEdit={props.setmodalEdit}
+                handleEdit={handleEditUnidad}
+            />
+           <BorrarIcon
+        borrar={props.borrar}/>
+        </div>
           </li> 
-    </div>)}
-
+          )    
+    }
+    
 export{Unidad};
-
-{/* let {clases}=props
-{clases.map(([unidad, clase])=>
-<Clase
-key={unidad.text}
-text={clase.text}
-hecho={clase.hecho}
-clases={props.clases}
-onCheck={()=>check(clase.text)}
-onBorrar={()=>borrar(clase.text)}
-></Clase>)
-}  */}
-
+// import React from "react";
 // import {CheckIcon} from "../Icono/CheckIcon"
 // import {BorrarIcon} from "../Icono/BorrarIcon"
-// import "../CreadorSubTarea/CreadorSubTarea.css";
-// import React from "react";
 // import "../Icono/Icono.css"
-// import { CreadorSubTarea } from "../CreadorSubTarea/CreadorSubTarea";
-// import { CreadorLisSub } from "../CreadorLisSub/CreadorLisSub";
-// import { TodoItemSub } from "../TodoItemSub/TodoItemSub";
-// import { LisSub } from "../LisSub/LisSub";
-// import { ObjetivosContext } from "../ObjetivosContext/ObjetivosContext";
+// import "../lis/lis.css"
 
 
-// function TodoItem(props){
-//     const {
-//         openSubLis}=React.useContext(ObjetivosContext)
-//  return(
-//      <li className="Lis">
+// function Unidad(props){
+  
+//     return(
+//     <div>
+//         <li className="Lis">
 //         <CheckIcon 
 //         hecho={props.hecho}
-//         check={props.check}
+//         onCheck={props.onCheck}
 //         />
-//         <p 
-//         className={`Context ${props.hecho && "Context--hecho"}`}
+//         <p  className={`Context ${props.hecho && "Context--hecho"}`}
 //         >{props.text}
-//         </p>
-//         <p>{props.botonCreadorSubLis}</p>
-//         <p>{props.botonCreadorSubTarea}</p>
-//            <BorrarIcon
-//         borrar={props.borrar}/>
-//       {openSubLis &&(  
-//          <LisSub className="Lis">
-//             <TodoItemSub>
-//             </TodoItemSub>
-//          </LisSub>)}
-//           </li> 
-//           )    
+        
+//           </p>         
+//         <BorrarIcon
+//         onBorrar={props.onBorrar}/>
+//           </li>
+      
+          
+//     </div>)
 //     }
-    
-// export{TodoItem};
+
+// export{Unidad};
+
+
 
 
 

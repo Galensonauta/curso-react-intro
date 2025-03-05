@@ -1,10 +1,29 @@
-h1{
-    font-size: 24px;
-    text-align: center;
-    margin: 0;
-    padding: 6px;
-    font-weight: normal;
-    background-color: #6cd01094;
+
+.count {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+border-radius: 25px;
+    background-color: var(--AzulVerde);   
+    color: var(--rosado);
+    position: relative;
+    font-family: 'Montserrat';
+    margin: inherit;  
+    font-size: 25px; 
+  }
+  .button{
+    width: -webkit-fill-available;
+    font-size: 20px;
+    font-weight: 900;
+    box-shadow: var(--box-shadow);
+    display: inline-flex;
+    background-color: var(--AzulVerde);
+    color: var(--rosado);
+    cursor: pointer;
+  }
+.counButtons{
+  display: flex;
+      justify-content: center;
 }
-
-
