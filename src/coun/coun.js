@@ -9,7 +9,7 @@ function Coun(){
   }=React.useContext(ObjetivosContext)
     return(
       <><h1 className="count">
-        Has completado {objetivosLogrados} de {objetivosTotales} tareas
+        Completaste {objetivosLogrados} de {objetivosTotales} tareas
       </h1>
       <div className="counButtons">
       <button className="count button"
